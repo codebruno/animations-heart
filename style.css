@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #002342;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.valentines-container{
+    text-align: center;
+}
+
+.heart{
+    width: 100px;
+    height: 100px;
+    background: #ff69b4;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+
+    margin: 10px auto 40px auto;
+}
+
+.heart::before,
+.heart::after{
+    content: " ";
+    width: 100px;
+    height: 100px;
+    background: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before{
+    top: -50px;
+    left: 0;
+}
+
+.heart::after{
+    left: 50px;
+    top: 0;
+}
+
+.text{
+    font-size: 24px;
+    color: #ff69b4;
+}
+
+@keyframes pulse{
+    0%, 100%{
+        transform: scale(1) rotate(-45deg);
+    }
+    50%{
+        transform: scale(1.1) rotate(-45deg)
+    }
+}
